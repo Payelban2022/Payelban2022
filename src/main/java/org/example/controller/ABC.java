@@ -2,6 +2,7 @@ package org.example.controller;
 
 import org.example.service.Checkcount;
 import org.example.service.Checkcountry;
+import org.example.service.Checkname;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -33,6 +34,15 @@ public class ABC {
             return object2.allcount(count);
         }
 
+    @GetMapping("/namecheck/{position}")
+    public String positionData (@PathVariable int position){
+        Checkname object3 = new Checkname();
+        return object3.allname(position);
+    }
 
 
-}
+    }
+
+
+
+
